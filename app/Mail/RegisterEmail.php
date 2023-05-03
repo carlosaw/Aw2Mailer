@@ -36,6 +36,9 @@ class RegisterEmail extends Mailable
 
         return $this->view('Mail.registerMail', [
             'nome' => $this->user->name
+        ])->attach(__DIR__.'/../../public/boneco.png', [
+            'as' => '404.png'
         ]);
+        // attach('C:\projetosLaravel\Aw2Mailer\public\boneco.png');
     }
 }
