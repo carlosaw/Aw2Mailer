@@ -33,6 +33,9 @@ class RegisterEmail extends Mailable
     public function build()
     {
         //
+        $this->subject('Assunto do email');
+        $this->from('reply@email.com', 'Reply Bot');// Ao responder o email
+        $this->replyTo('awregulagem@gmail.com');// A resposta chega aqui! 
 
         return $this->view('Mail.registerMail', [
             'nome' => $this->user->name
