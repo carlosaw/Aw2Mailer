@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Mail;
 class SendAuthMail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+    
     private $user;
     /**
      * Create a new job instance.
